@@ -1,6 +1,7 @@
 package com.sharpmind.bookmyshow.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import lombok.Data;
@@ -11,6 +12,8 @@ import java.util.List;
 @Entity
 public class Screen extends BaseModel{
     private String name;
-    @OneToMany
+    @OneToMany(mappedBy = "screen")
     private List<Seat> seat;
+    @ManyToOne
+    Theatre theatre;
 }
