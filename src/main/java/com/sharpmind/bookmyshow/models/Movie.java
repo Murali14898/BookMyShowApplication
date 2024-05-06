@@ -1,6 +1,7 @@
 package com.sharpmind.bookmyshow.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 import java.util.List;

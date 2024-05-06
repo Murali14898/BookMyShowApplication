@@ -12,8 +12,6 @@ import java.util.List;
 @Entity
 public class Screen extends BaseModel{
     private String name;
-    @OneToMany(mappedBy = "screen")
+    @OneToMany
     private List<Seat> seat;
-    @ManyToOne
-    Theatre theatre;
 }
